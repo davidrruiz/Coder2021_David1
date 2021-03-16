@@ -1,0 +1,597 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Seccion Inicio */
+.contenedor {
+  background-color: azul;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "menu menu menu" "descripcion descripcion descripcion" "tituloprincipal tituloprincipal tituloprincipal" "moto auto publico" "testimonios testimonios testimonios" "sede1 auto1 publico1" "footer footer footer";
+}
+
+.carousel {
+  grid-area: carousel;
+  display: flex;
+  margin: 20px;
+}
+
+.nav-item a {
+  color: white;
+}
+
+.dropdown-menu li {
+  background-color: grey;
+}
+
+.menu {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: menu;
+  background: #252e3d;
+  margin: 20px;
+}
+
+.contenedor1 > .menu {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+}
+
+.contenedor3 > .menu {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+}
+
+.contenedor4 > .menu {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+}
+
+.contenedor5 > .menu {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+}
+
+.menu ul li {
+  list-style: none;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 30px;
+  color: white;
+}
+
+.menu ul li a:hover {
+  background-color: grey;
+}
+
+.search {
+  float: left;
+  margin: 0px;
+  width: 1400px;
+}
+
+#im1 {
+  width: 100px;
+}
+
+.descripcion {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: descripcion;
+  height: 800px;
+  background-image: url(../imagenes/road1.jpg);
+  background-position: center;
+  opacity: 0.8;
+  animation-name: movimiento;
+  animation: movimiento 10s infinite;
+  margin: 20px;
+}
+
+@keyframes movimiento {
+  from {
+    background-position: bottom left;
+  }
+}
+to {
+  background-position: top right;
+}
+
+.descripcion h2 {
+  font-size: 30px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  animation-name: aparecer;
+  animation-duration: 15s;
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.descripcion p {
+  border: 10px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.tituloprincipal {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: tituloprincipal;
+  text-align: center;
+  padding: 100px;
+}
+
+.contenedor3 > .tituloprincipal {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+}
+
+.tituloprincipal h1 {
+  background-color: black;
+  color: white;
+}
+
+.programa {
+  grid-area: programa;
+  background: white;
+  height: 800px;
+  padding: 10px;
+}
+
+#moto1 img {
+  transition: transform 0.2s;
+  /* Animation */
+}
+
+#auto img {
+  transition: transform 0.2s;
+  /* Animation */
+}
+
+#bus img {
+  transition: transform 0.2s;
+  /* Animation */
+}
+
+#moto1:hover img {
+  transform: scale(1.2);
+  background-color: grey;
+}
+
+#auto:hover img {
+  transform: scale(1.2);
+  background-color: grey;
+}
+
+#bus:hover img {
+  transform: scale(1.2);
+  background-color: grey;
+}
+
+.moto h1 {
+  text-align: center;
+}
+
+.sede1 h1 {
+  text-align: center;
+}
+
+.auto h1 {
+  text-align: center;
+}
+
+.sede2 h1 {
+  text-align: center;
+}
+
+.publico {
+  width: 300px;
+}
+
+.publico h1 {
+  text-align: center;
+}
+
+.sede3 h1 {
+  text-align: center;
+}
+
+#moto1 {
+  text-align: center;
+  margin: 50px;
+}
+
+#auto {
+  text-align: center;
+  margin: 50px;
+}
+
+#bus {
+  text-align: center;
+  margin: 50px;
+}
+
+.carousel-inner {
+  width: 100%;
+  max-height: 100% !important;
+}
+
+.carousel-item img {
+  height: 400px;
+  width: 200px;
+}
+
+.footer {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: footer;
+  background: #252e3d;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contenedor1 > .footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+}
+
+.contenedor3 > .footer {
+  -ms-grid-row: 10;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+}
+
+.contenedor4 > .footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+}
+
+.contenedor5 > .footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+}
+
+.redessociales h1 {
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  margin: 10px;
+}
+
+.twitter {
+  display: flex;
+  margin: 10px;
+}
+
+.twitter a {
+  margin: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.instagram {
+  display: flex;
+}
+
+.instagram a {
+  margin: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.facebook {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.facebook a {
+  margin: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.sedes h1 {
+  color: white;
+  font-size: 25px;
+  margin: 10px;
+}
+
+.sedes p {
+  color: white;
+}
+
+.contact h1 {
+  color: white;
+  font-size: 25px;
+  margin: 10px;
+}
+
+.contact p {
+  margin: 20px;
+  color: white;
+}
+
+/* Sección Nosotros */
+.contenedor1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "menu menu menu" "nosotros_carousel nosotros_carousel nosotros_carousel" "footer footer footer";
+}
+
+.nosotros_carousel {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: nosotros_carousel;
+  display: flex;
+}
+
+.footer {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: footer;
+  background: #252e3d;
+}
+
+.contenedor1 > .footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+}
+
+.contenedor3 > .footer {
+  -ms-grid-row: 10;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+}
+
+.contenedor4 > .footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+}
+
+.contenedor5 > .footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+}
+
+/* Sección Cursos*/
+.contenedor3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "menu menu menu" "curso_title curso_title curso_title" "motocicleta1 automovil publico1" "dropdown-cursos dropdown-cursos dropdown-cursos" "tituloprincipal tituloprincipal tituloprincipal" "curso_motorcycle curso_motorcycle curso_motorcycle" "curso_title2 curso_title2 curso_title2" "curso_auto curso_auto curso_auto" "curso_title3 curso_title3 curso_title3" "footer footer footer";
+}
+
+.curso_title {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: curso_title;
+  text-align: center;
+  padding: 100px;
+}
+.curso_title h1 {
+  background-color: black;
+  color: white;
+}
+
+.curso_title2 {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: curso_title2;
+  text-align: center;
+  padding: 100px;
+}
+.curso_title2 h1 {
+  background-color: black;
+  color: white;
+}
+
+.curso_title3 {
+  -ms-grid-row: 9;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: curso_title3;
+  text-align: center;
+  padding: 100px;
+}
+.curso_title3 h1 {
+  background-color: black;
+  color: white;
+}
+
+.titopciones {
+  grid-area: titopciones;
+}
+
+.motocicleta1 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: motocicleta1;
+}
+
+.automovil {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: automovil;
+}
+
+.dropdown-cursos {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  padding: 30px;
+  grid-area: dropdown-cursos;
+}
+
+.curso_motorcycle {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  display: flex;
+  flex-direction: row;
+  grid-area: curso_motorcycle;
+}
+.curso_motorcycle .hijo1 {
+  padding: 100px;
+}
+.curso_motorcycle .hijo1 img {
+  width: 500px;
+}
+.curso_motorcycle .hijo2 {
+  padding: 20px;
+}
+.curso_motorcycle .hijo3 {
+  padding: 20px;
+}
+
+.curso_auto {
+  -ms-grid-row: 8;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: curso_auto;
+  display: flex;
+  flex-direction: row;
+}
+
+/* Sección Contacto*/
+.contenedor4 {
+  display: grid;
+  grid-template-areas: "menu menu menu" "formulario formulario mapa" "footer footer footer";
+}
+
+.formulario {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: formulario;
+  padding: 30px;
+  justify-content: center;
+}
+
+.mapa {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: mapa;
+  padding: 30px;
+  margin: 80px;
+}
+
+/* Seccion servicios corporativos */
+.contenedor5 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "menu menu menu" "corpo corpo corpo" "footer footer footer";
+}
+
+.corpo h2 {
+  text-align: center;
+  font-size: 30px;
+  color: red;
+}
+.corpo p {
+  text-align: center;
+}
+.corpo img {
+  text-align: center;
+  width: 500px;
+  margin: 20px;
+}
+
+/* Media queries para hacer el index responsive */
+@media screen and (min-width: 480px) and (max-width: 780px) {
+  .contenedor {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .contenedor1 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .contenedor4 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .contenedor3 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .titopciones {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .motocicleta1 {
+    width: 100%;
+    padding: 100px;
+  }
+
+  #auto1 {
+    width: 100%;
+    justify-content: center;
+    padding: auto;
+  }
+
+  .descripcion p {
+    padding: 20px;
+  }
+
+  .meta h1 {
+    font-size: 25px;
+  }
+
+  .meta h2 {
+    font-size: 20px;
+  }
+
+  .video1 {
+    width: 100%;
+    margin: 10px;
+    padding: 0;
+  }
+
+  .menu {
+    width: 100%;
+  }
+
+  .publico {
+    width: 100%;
+  }
+}

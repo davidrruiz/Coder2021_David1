@@ -1,0 +1,545 @@
+*{
+  margin:0;
+  font-family: 'Roboto', sans-serif;
+  
+    
+}
+
+
+.contenedor{
+
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: "menu menu menu"
+                         "carousel carousel carousel"
+                         "tituloprincipal tituloprincipal tituloprincipal"
+                         "moto auto publico"
+                         "footer footer footer"
+                         
+
+}
+
+.carousel{
+    grid-area: carousel;
+    display:flex;
+    margin:20px;
+}
+
+
+
+    
+.nav-item a {
+    color:white;
+}
+
+.dropdown-menu li{
+    background-color: grey;
+}
+
+.menu{
+    
+    
+    grid-area:menu;
+    background: #252e3d;
+    margin:20px;
+    
+    
+
+}
+
+.menu ul li{
+    
+    list-style:none;
+
+}
+
+.menu ul li a{
+
+    
+    text-decoration: none;
+    text-transform: uppercase;
+    padding:30px;
+    color:white;
+    
+}
+
+.menu ul li a:hover{
+
+    background-color: grey;
+
+}
+
+.search{
+
+  float:left;
+  margin:0px;
+  width:1400px;
+  
+}
+
+/* Seccion Inicio */
+
+#im1{
+    width: 100px;
+}
+
+
+.descripcion{
+    grid-area:descripcion;
+    height:800px;
+    background-image: url(../imagenes/road1.jpg);
+    background-position: center;
+    opacity:0.8;
+    animation-name: movimiento;
+    animation: movimiento 10s infinite;
+    margin:20px;
+}
+
+@keyframes movimiento{
+    from{
+        background-position:bottom left;
+    }
+
+    }to{
+    background-position: top right ;
+
+}
+
+.descripcion h2{
+    
+    font-size: 30px;
+    padding:20px;
+    color:white;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    animation-name:aparecer;
+    animation-duration: 15s;
+    
+}
+
+
+
+
+@keyframes aparecer{
+    0%{opacity: 0;}
+    100%{opacity:1}
+}
+
+.descripcion  p{
+
+    border:10px;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    width:100%;
+    text-align: center;
+}
+
+
+.tituloprincipal{
+    grid-area: tituloprincipal;
+    text-align: center;
+    padding:100px;
+    
+}
+
+.tituloprincipal h1{
+    background-color: midnightblue;
+    animation-name: efecto;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+    animation-delay: 0s;
+}
+
+@keyframes efecto{
+    0% {background-color: white;}
+    25%{background-color: blue;}
+}
+
+.programa{
+    grid-area:programa;
+    background:white;
+    height: 800px;
+    padding:10px;
+}
+
+
+.moto h1{
+    text-align: center;
+    
+}
+
+.parrafoservicios{
+    text-align:justify;
+    padding:20px;
+    font-size: 16px;
+}
+
+
+
+.auto h1{
+    text-align: center;  
+}
+
+
+.publico {
+   
+    width:300px;
+}
+
+.publico h1{
+    text-align: center;
+}
+
+#moto1{
+    text-align: center;
+    margin: 50px;
+}
+
+#auto{
+
+    text-align: center;
+    margin: 50px;
+}
+
+#bus{
+
+    text-align: center;
+    margin: 50px;
+}
+
+
+.footer{
+
+    grid-area: footer;
+    background: #252e3d;
+    display:flex;
+    justify-content: space-between;
+   
+  
+}
+
+.redessociales h1{
+    color:white;
+    font-size: 25px;
+    text-align: center;
+    margin:10px;
+}
+
+
+.twitter{
+    display:flex;
+    margin:10px;
+}
+
+.twitter a{
+    margin:10px;
+    text-decoration: none;
+    color:white;
+}
+
+.instagram{
+    display:flex;
+    
+
+}
+
+.instagram a{
+    margin:10px;
+    text-decoration: none;
+    color:white;
+}
+
+.facebook{
+    display: flex;
+    justify-content: space-between;
+    margin:10px;
+}
+
+.facebook a{
+    margin:10px;
+    text-decoration: none;
+    color:white;
+}
+
+
+.sedes h1{
+    color:white;
+    font-size: 25px;
+    margin:10px;
+
+}
+
+.sedes p{
+    color:white;
+}
+
+.contact h1{
+
+    color:white;
+    font-size: 25px;
+    margin:10px;
+
+}
+
+.contact p{
+    margin:20px;
+    color:white;
+}
+
+/* Sección Nosotros */
+
+
+.contenedor1{
+    display:grid;
+    grid-template-areas: "menu menu menu"
+                         "descripcion descripcion descripcion"
+                         "meta meta meta"
+                         "video1 parrafoala parrafoaula"
+                         "footer footer footer"
+
+}
+
+.meta{
+    grid-area: meta;
+    font-family: 'Roboto', sans-serif;
+}
+
+.meta h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 60px;
+    text-align: center;
+    padding:100px;
+}
+
+.meta h2{
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    padding:30px;
+}
+
+.meta p{
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    padding:50px;
+
+}
+
+.parrafoaula{
+    grid-area: parrafoaula;
+   
+    justify-content: center;
+    padding:50px;
+}
+
+.video1{
+    grid-area: video1;
+    padding:50px;
+
+}
+
+.footer{
+
+    grid-area:footer;
+    background: #252e3d;
+  
+}
+
+
+
+
+
+
+   
+/* Seccion Nosotros*/
+   
+
+
+/* Sección Cursos*/
+.contenedor3{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: "menu menu menu"
+                         "titopciones titopciones titopciones"
+                         "motocicleta1 automovil publico1" 
+                         "dropdown-cursos dropdown-cursos dropdown-cursos"
+                         "footer footer footer"
+
+}
+
+.titopciones{
+
+    grid-area: titopciones;
+    
+
+}
+
+.motocicleta1{
+
+    grid-area:motocicleta1;
+    
+}
+
+.automovil{
+    grid-area:automovil;
+
+}
+
+.dropdown-cursos{
+    padding:30px;
+    grid-area:dropdown-cursos
+    
+}
+
+
+
+
+/* Sección Contacto*/
+.contenedor4{
+    display:grid;
+    grid-template-areas: "menu menu menu"
+                         "formulario formulario mapa"
+                         "footer footer footer";
+
+}
+
+.formulario{
+
+    grid-area: formulario;
+    padding:30px;
+    justify-content: center;
+
+}
+
+.mapa{
+
+    grid-area:mapa;
+    padding:30px;
+    margin:80px;
+}
+
+
+
+/* Seccion servicios corporativos */
+
+.contenedor5{
+
+    display:grid;
+    grid-template-areas: "menu menu menu"
+                       
+                         "footer footer footer"
+}
+
+
+.carousel slide{
+    grid-area:carousel slide;
+    height:20%;
+  
+   
+}
+
+
+/* Media queries para hacer el index responsive */
+
+@media screen and (min-width: 780px)and (max-width:1024px) {
+    
+       
+}
+
+
+@media screen and (min-width: 480px)and (max-width:780px) {
+
+    
+    .contenedor{
+
+        display:flex;
+        flex-wrap: wrap;
+
+    }
+
+    .contenedor1{
+
+        display:flex;
+        flex-wrap: wrap;
+
+    }
+
+    .contenedor4{
+
+        display:flex;
+        flex-wrap: wrap;
+
+    }
+
+    .contenedor3{
+
+        display:flex;
+        flex-wrap: wrap;
+
+    }
+    .titopciones{
+        text-align: center;
+        margin:20px;
+        padding:20px;
+    }
+
+    .motocicleta1{
+        width:100%;
+        padding:100px;
+
+    }
+
+    
+
+    #auto1{
+        width:100%;
+        justify-content: center;
+        padding:auto;
+    }
+
+    .publico1{
+
+
+    }
+
+
+    .descripcion p{
+        padding:20px;
+    }
+
+    .meta h1{
+        font-size: 25px;
+    }
+
+    .meta h2{
+        font-size: 20px;
+    }
+
+    .video1{
+        width:100%;
+        margin:10px;
+        padding:0;
+    }
+
+    .menu{
+        width:100%;
+        
+    }
+
+    .publico{
+        width:100%;
+    }
+
+   
+    
+
+    
+    
+ 
+
+    
+}
