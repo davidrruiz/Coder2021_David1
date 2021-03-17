@@ -391,6 +391,19 @@
       
       
   }
+
+  .prueba_nosotros{
+
+    margin:100px;
+      
+
+    p{
+
+        padding:30px;
+
+    }
+      
+  }
   
 
 
@@ -498,6 +511,7 @@
       display:flex;
       flex-direction: row;
       grid-area:curso_motorcycle;
+      justify-content: center;
 
       .hijo1{
           padding:100px;
@@ -530,6 +544,37 @@
     grid-area: curso_auto;
     display:flex;
     flex-direction: row;
+
+    margin:100px;
+    justify-content: center;
+
+
+
+    .dos_hijo1{
+
+        padding:20px;
+
+
+    }
+
+    .dos_hijo2{
+
+        padding:20px;
+
+
+    }
+
+    .dos_hijo1{
+
+        padding:20px;
+
+
+    }
+
+
+
+
+      
   }
 
 
@@ -566,35 +611,60 @@
   /* Seccion servicios corporativos */
   
   .contenedor5{
+
+    .corpo{
+
+        text-align: center;
+        padding:100px;
+    
+        .corpo__titulo{
+            background-color: black;
+            color:white;
+        }
+    
+    
+        
+       }
+      
   
-      display:grid;
-      grid-template-columns: repeat(3,1fr);
-      grid-template-areas: "menu menu menu"
-                            "corpo corpo corpo"
-                           "footer footer footer"
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-areas: "menu menu menu"
+                         "corpo corpo corpo"
+                         "corpo_img corpo_img corpo_img"
+                          "footer footer footer"
+
   }
+
+  .corpo{
+    grid-area: corpo;
+}
+
+.corpo_img{
+    margin:20%;
+
+    img{
+
+        justify-content: center;
+
+
+
+
+    }
+
+    p{
+        font-size: 30px;
+        padding:30px;
+    }
+    
+
+    grid-area: corpo_img;
+
+}
   
   
 
-   .corpo{
 
-
-       h2{
-           text-align: center;
-           font-size: 30px;
-           color:red;
-       }
-
-       p{
-           text-align: center;
-       }
-       img{
-           text-align: center;
-           width:500px;
-           margin:20px
-       }
-   }
-  
   
 
   

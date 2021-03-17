@@ -273,7 +273,7 @@ to {
 }
 
 .contenedor5 > .footer {
-  -ms-grid-row: 3;
+  -ms-grid-row: 4;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
 }
@@ -354,6 +354,13 @@ to {
   display: flex;
 }
 
+.prueba_nosotros {
+  margin: 100px;
+}
+.prueba_nosotros p {
+  padding: 30px;
+}
+
 .footer {
   -ms-grid-row: 7;
   -ms-grid-column: 1;
@@ -381,7 +388,7 @@ to {
 }
 
 .contenedor5 > .footer {
-  -ms-grid-row: 3;
+  -ms-grid-row: 4;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
 }
@@ -463,6 +470,7 @@ to {
   display: flex;
   flex-direction: row;
   grid-area: curso_motorcycle;
+  justify-content: center;
 }
 .curso_motorcycle .hijo1 {
   padding: 100px;
@@ -484,6 +492,17 @@ to {
   grid-area: curso_auto;
   display: flex;
   flex-direction: row;
+  margin: 100px;
+  justify-content: center;
+}
+.curso_auto .dos_hijo1 {
+  padding: 20px;
+}
+.curso_auto .dos_hijo2 {
+  padding: 20px;
+}
+.curso_auto .dos_hijo1 {
+  padding: 20px;
 }
 
 /* Sección Contacto*/
@@ -513,21 +532,37 @@ to {
 .contenedor5 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "menu menu menu" "corpo corpo corpo" "footer footer footer";
+  grid-template-areas: "menu menu menu" "corpo corpo corpo" "corpo_img corpo_img corpo_img" "footer footer footer";
+}
+.contenedor5 .corpo {
+  text-align: center;
+  padding: 100px;
+}
+.contenedor5 .corpo .corpo__titulo {
+  background-color: black;
+  color: white;
 }
 
-.corpo h2 {
-  text-align: center;
+.corpo {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: corpo;
+}
+
+.corpo_img {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  margin: 20%;
+  grid-area: corpo_img;
+}
+.corpo_img img {
+  justify-content: center;
+}
+.corpo_img p {
   font-size: 30px;
-  color: red;
-}
-.corpo p {
-  text-align: center;
-}
-.corpo img {
-  text-align: center;
-  width: 500px;
-  margin: 20px;
+  padding: 30px;
 }
 
 /* Media queries para hacer el index responsive */
