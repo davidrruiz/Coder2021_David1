@@ -171,23 +171,26 @@ to {
   /* Animation */
 }
 
+#bus {
+  margin-bottom: 30PX;
+}
 #bus img {
   transition: transform 0.2s;
   /* Animation */
 }
 
 #moto1:hover img {
-  transform: scale(1.2);
+  transform: scale(1.1);
   background-color: grey;
 }
 
 #auto:hover img {
-  transform: scale(1.2);
+  transform: scale(1.1);
   background-color: grey;
 }
 
 #bus:hover img {
-  transform: scale(1.2);
+  transform: scale(1.1);
   background-color: grey;
 }
 
@@ -221,17 +224,16 @@ to {
 
 #moto1 {
   text-align: center;
-  margin: 50px;
+  margin: 0px;
 }
 
 #auto {
   text-align: center;
-  margin: 50px;
+  margin: 0px;
 }
 
 #bus {
   text-align: center;
-  margin: 50px;
 }
 
 .carousel-inner {
@@ -276,6 +278,16 @@ to {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
+}
+
+.btn-wsp {
+  position: fixed;
+  margin-top: 550px;
+  margin-left: 1200px;
+}
+
+.test1 {
+  width: 100px;
 }
 
 .redessociales h1 {
