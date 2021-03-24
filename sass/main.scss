@@ -6,10 +6,17 @@
   }
 
 /* Seccion Inicio */
+
+.navbar-dark .navbar-brand{
+    color:#afef20;
+    font-size: 28px;
+    font-family: 'New Tegomin', serif;
+}
   
   .contenedor{
       
       background-color:azul;
+    
   
       display:grid;
       grid-template-columns: repeat(3,1fr);
@@ -93,13 +100,44 @@
   
   .descripcion{
       grid-area:descripcion;
-      height:800px;
+      height:490px;
       background-image: url(../imagenes/road1.jpg);
       background-position: center;
       opacity:0.8;
       animation-name: movimiento;
       animation: movimiento 10s infinite;
       margin:20px;
+      
+
+        h2{
+            font-size: 30px;
+            background-color: black;
+            padding:20px;
+            color:#fcf403;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            animation-name:aparecer;
+            animation-duration: 15s;
+        }
+
+        p{
+  
+            
+            color:white;
+            
+            font-family: 'New Tegomin', serif;
+            font-size: 30px;
+            width:100%;
+            text-align: center;
+            margin-top: 250px;
+            padding:30px;
+
+            
+            
+        }
+
+
   }
   
   @keyframes movimiento{
@@ -113,36 +151,12 @@
   }
 
 
-  
-  .descripcion h2{
-      
-      font-size: 30px;
-      padding:20px;
-      color:white;
-      text-align: center;
-      font-family: 'Roboto', sans-serif;
-      animation-name:aparecer;
-      animation-duration: 15s;
-      
-  }
-  
-  
-  
-  
   @keyframes aparecer{
       0%{opacity: 0;}
       100%{opacity:1}
   }
   
-  .descripcion  p{
-  
-      border:10px;
-      color:white;
-      font-family: 'Roboto', sans-serif;
-      font-size: 20px;
-      width:100%;
-      text-align: center;
-  }
+
   
   
   .tituloprincipal{
@@ -309,7 +323,7 @@
 
     position: fixed;
     margin-top: 550px;
-    margin-left:1200px;
+    margin-left:1250px;
       
   }
 
@@ -327,41 +341,14 @@
   }
   
   
-  .twitter{
+  .rrss{
       display:flex;
       margin:10px;
-  }
-  
-  .twitter a{
-      margin:10px;
-      text-decoration: none;
-      color:white;
-  }
-  
-  .instagram{
-      display:flex;
-      
-  
-  }
-  
-  .instagram a{
-      margin:10px;
-      text-decoration: none;
-      color:white;
-  }
-  
-  .facebook{
-      display: flex;
       justify-content: space-between;
-      margin:10px;
   }
-  
-  .facebook a{
-      margin:10px;
-      text-decoration: none;
-      color:white;
-  }
-  
+
+
+
   
   .sedes h1{
       color:white;
@@ -385,6 +372,7 @@
   .contact p{
       margin:20px;
       color:white;
+      margin-right:150px;
   }
   
   /* Sección Nosotros */
