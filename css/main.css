@@ -275,7 +275,7 @@ to {
 }
 
 .contenedor4 > .footer {
-  -ms-grid-row: 5;
+  -ms-grid-row: 6;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
 }
@@ -374,7 +374,7 @@ to {
 }
 
 .contenedor4 > .footer {
-  -ms-grid-row: 5;
+  -ms-grid-row: 6;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
 }
@@ -500,21 +500,19 @@ to {
 /* Sección Contacto*/
 .contenedor4 {
   display: grid;
-  grid-template-areas: "menu menu menu" "formcontacto formcontacto formcontacto" "container container container" "formulario formulario mapa" "footer footer footer";
+  grid-template-areas: "menu menu menu" "formcontacto formcontacto formcontacto" "container container container" "sedestitulo sedestitulo sedestitulo" "mapa mapa mapa" "footer footer footer";
 }
 
 .formulario {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-area: formulario;
   padding: 30px;
   justify-content: center;
 }
 
 .mapa {
-  -ms-grid-row: 4;
-  -ms-grid-column: 3;
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
   grid-area: mapa;
   padding: 30px;
   margin: 80px;
@@ -534,6 +532,21 @@ to {
   color: white;
 }
 
+.sedestitulo {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: sedestitulo;
+  text-align: center;
+  padding: 100px;
+}
+
+.sedestitulo h1 {
+  background-color: black;
+  color: white;
+}
+
+/* Style inputs with type="text", select elements and textareas */
 input[type=text], select, textarea {
   width: 100%;
   /* Full width */
@@ -552,7 +565,6 @@ input[type=text], select, textarea {
   resize: vertical;
 }
 
-/* Style the submit button with a specific background color etc */
 input[type=submit] {
   background-color: #4CAF50;
   color: white;
@@ -562,19 +574,17 @@ input[type=submit] {
   cursor: pointer;
 }
 
-/* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
   background-color: #45a049;
 }
 
-/* Add a background color and some padding around the form */
 .container {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-area: container;
   border-radius: 5px;
-  background-color: #b9f711;
+  background-color: #aff047;
   padding: 20px;
   border-top: 300px;
 }
