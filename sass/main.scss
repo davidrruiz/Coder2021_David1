@@ -827,6 +827,14 @@ input[type=text], select, textarea {
         margin-left:30%;
         width: 40%;
     }
+
+    .videocorporate{
+      
+        iframe{
+            width:200;
+            margin-left:30%;
+        }
+    }
     
       
          
@@ -949,6 +957,29 @@ input[type=text], select, textarea {
 
     }
 
+    .motocicleta1{
+  
+        grid-area:motocicleta1;
+        margin-left:10%;
+        
+    }
+    .automovil{
+  
+        
+        margin-left:10%;
+        
+    }
+    
+
+    .publico1{
+  
+        
+        margin-left:10%;
+        
+    }
+    
+    
+
 
 
     //seccion contacto responsive
@@ -957,6 +988,16 @@ input[type=text], select, textarea {
         margin-left:10%;
         margin-right:10%;
     }
+
+    .videocorporate{
+      
+        iframe{
+            width:200;
+            margin-left:10%;
+        }
+    }
+
+
 }
 
 

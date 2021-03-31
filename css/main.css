@@ -690,6 +690,11 @@ input[type=submit]:hover {
     margin-left: 30%;
     width: 40%;
   }
+
+  .videocorporate iframe {
+    width: 200;
+    margin-left: 30%;
+  }
   .menu {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
@@ -774,9 +779,29 @@ input[type=submit]:hover {
     grid-template-areas: "menu" "curso_title" "motocicleta1" "automovil" "publico1" "dropdown-cursos" "tituloprincipal" "curso_motorcycle" "curso_title2" "curso_auto" "curso_title3" "card-group" "footer";
   }
 
+  .motocicleta1 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: motocicleta1;
+    margin-left: 10%;
+  }
+
+  .automovil {
+    margin-left: 10%;
+  }
+
+  .publico1 {
+    margin-left: 10%;
+  }
+
   .container {
     margin-left: 10%;
     margin-right: 10%;
+  }
+
+  .videocorporate iframe {
+    width: 200;
+    margin-left: 10%;
   }
   .menu {
     -ms-grid-row: 1;
@@ -878,5 +903,12 @@ input[type=submit]:hover {
     -ms-grid-row: 10;
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 780px){
+
+  .motocicleta1 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
   }
 }
