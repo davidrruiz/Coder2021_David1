@@ -18,12 +18,6 @@
   grid-template-areas: "menu menu menu" "descripcion descripcion descripcion" "tituloprincipal tituloprincipal tituloprincipal" "moto auto publico" "testimonios testimonios testimonios" "sede1 auto1 publico1" "footer footer footer";
 }
 
-.carousel {
-  grid-area: carousel;
-  display: flex;
-  margin: 20px;
-}
-
 .nav-item a {
   color: white;
 }
@@ -64,11 +58,6 @@
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
 }
-
-.menu ul li {
-  list-style: none;
-}
-
 .menu ul li a {
   text-decoration: none;
   text-transform: uppercase;
@@ -78,16 +67,6 @@
 
 .menu ul li a:hover {
   background-color: grey;
-}
-
-.search {
-  float: left;
-  margin: 0px;
-  width: 1400px;
-}
-
-#im1 {
-  width: 100px;
 }
 
 .descripcion {
@@ -154,17 +133,9 @@ to {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
 }
-
 .tituloprincipal h1 {
   background-color: black;
   color: white;
-}
-
-.programa {
-  grid-area: programa;
-  background: white;
-  height: 800px;
-  padding: 10px;
 }
 
 #moto1 img {
@@ -174,7 +145,6 @@ to {
 
 #auto img {
   transition: transform 0.2s;
-  /* Animation */
 }
 
 #bus {
@@ -216,10 +186,6 @@ to {
   text-align: center;
 }
 
-.publico {
-  width: 300px;
-}
-
 .publico h1 {
   text-align: center;
 }
@@ -242,16 +208,6 @@ to {
   text-align: center;
 }
 
-.carousel-inner {
-  width: 100%;
-  max-height: 100% !important;
-}
-
-.carousel-item img {
-  height: 400px;
-  width: 200px;
-}
-
 .footer {
   -ms-grid-row: 7;
   -ms-grid-column: 1;
@@ -263,7 +219,7 @@ to {
 }
 
 .contenedor1 > .footer {
-  -ms-grid-row: 6;
+  -ms-grid-row: 7;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
 }
@@ -335,7 +291,7 @@ to {
 .contenedor1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "menu menu menu" "nosotros_titulo nosotros_titulo nosotros_titulo" "motivos motivos motivos" "nosotros_titulo1 nosotros_titulo1 nosotros_titulo1" "contenedorteam contenedorteam contenedorteam" "footer footer footer";
+  grid-template-areas: "menu menu menu" "nosotros_titulo nosotros_titulo nosotros_titulo" "motivos motivos motivos" "nosotros_titulo1 nosotros_titulo1 nosotros_titulo1" "contenedorteam contenedorteam contenedorteam" "nosotros_chatea nosotros_chatea nosotros_chatea " "footer footer footer";
 }
 
 .nosotros_titulo {
@@ -363,6 +319,14 @@ to {
 .nosotros_titulo1 h1 {
   background-color: black;
   color: white;
+}
+
+.nosotros_chatea {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: nosotros_chatea;
+  width: 50%;
 }
 
 .motivos {
@@ -401,9 +365,12 @@ to {
 }
 
 .jumbotron {
-  margin: 300px;
+  margin-left: 45%;
   margin-top: 50px;
   margin-bottom: 50px;
+}
+.jumbotron h1 {
+  font-weight: 200;
 }
 
 .display-4 {
@@ -419,7 +386,7 @@ to {
 }
 
 .contenedor1 > .footer {
-  -ms-grid-row: 6;
+  -ms-grid-row: 7;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
 }
@@ -750,10 +717,9 @@ input[type=submit]:hover {
 /* Media queries para hacer el index responsive */
 @media screen and (min-width: 780px) and (max-width: 1024px) {
   .contenedor {
-    width: 80%;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas: "menu menu menu" "descripcion descripcion descripcion" "tituloprincipal tituloprincipal tituloprincipal" "moto moto moto" "auto auto auto" "testimonios testimonios testimonios" "sede1 auto1 publico1" "footer footer footer";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "menu menu" "descripcion descripcion" "tituloprincipal tituloprincipal" "moto moto" "auto auto" "testimonios testimonios" "sede1 auto1" "publico1" "footer footer";
   }
 
   .descripcion h2 {
@@ -775,93 +741,199 @@ input[type=submit]:hover {
     background-color: black;
     color: white;
   }
+
+  .motivos {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: motivos;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+  }
+
+  .opciones {
+    margin-left: 30%;
+    width: 40%;
+  }
   .menu {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
+    -ms-grid-column-span: 2;
   }
   .descripcion {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
+    -ms-grid-column-span: 2;
   }
   .tituloprincipal {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
+    -ms-grid-column-span: 2;
   }
   .footer {
-    -ms-grid-row: 8;
+    -ms-grid-row: 9;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
+    -ms-grid-column-span: 2;
   }
   .footer {
-    -ms-grid-row: 8;
+    -ms-grid-row: 9;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
+    -ms-grid-column-span: 2;
   }
 }
-@media screen and (min-width: 480px) and (max-width: 780px) {
+@media screen and (min-width: 400px) and (max-width: 780px) {
   .contenedor {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "menu" "descripcion" "tituloprincipal" "moto" "auto" "publico" "testimonios" "sede1" "auto1" "publico1" "footer";
   }
 
-  .contenedor1 {
-    display: flex;
-    flex-wrap: wrap;
+  .descripcion h2 {
+    font-size: 20px;
+  }
+  .descripcion p {
+    color: white;
+    font-family: "New Tegomin", serif;
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+    margin-top: 35%;
+    padding: 10px;
+  }
+  .descripcion .tituloprincipal {
+    margin: 0;
+  }
+  .descripcion .tituloprincipal h1 {
+    background-color: black;
+    color: white;
+    width: 50%;
+    padding: 0;
+  }
+  .descripcion .publico {
+    display: block;
+    width: 100%;
   }
 
-  .contenedor4 {
+  .motivos {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: motivos;
     display: flex;
     flex-wrap: wrap;
+    margin: 10px;
+  }
+
+  .opciones {
+    margin-left: 30%;
+    width: 40%;
   }
 
   .contenedor3 {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "menu" "curso_title" "motocicleta1" "automovil" "publico1" "dropdown-cursos" "tituloprincipal" "curso_motorcycle" "curso_title2" "curso_auto" "curso_title3" "card-group" "footer";
+  }
+  .menu {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
   }
 
-  .titopciones {
-    text-align: center;
-    margin: 20px;
-    padding: 20px;
+  .contenedor3 > .menu {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+  .descripcion {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+  .tituloprincipal {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+
+  .contenedor3 > .tituloprincipal {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+  .footer {
+    -ms-grid-row: 11;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+
+  .contenedor3 > .footer {
+    -ms-grid-row: 13;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+  .footer {
+    -ms-grid-row: 11;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+
+  .contenedor3 > .footer {
+    -ms-grid-row: 13;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+
+  .card-group {
+    -ms-grid-row: 12;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+
+  .curso_title {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+
+  .curso_title2 {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+  }
+
+  .curso_title3 {
+    -ms-grid-row: 11;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
   }
 
   .motocicleta1 {
-    width: 100%;
-    padding: 100px;
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
   }
 
-  #auto1 {
-    width: 100%;
-    justify-content: center;
-    padding: auto;
+  .automovil {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
   }
 
-  .descripcion p {
-    padding: 20px;
+  .dropdown-cursos {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
   }
 
-  .meta h1 {
-    font-size: 25px;
+  .curso_motorcycle {
+    -ms-grid-row: 8;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
   }
 
-  .meta h2 {
-    font-size: 20px;
-  }
-
-  .video1 {
-    width: 100%;
-    margin: 10px;
-    padding: 0;
-  }
-
-  .menu {
-    width: 100%;
-  }
-
-  .publico {
-    width: 100%;
+  .curso_auto {
+    -ms-grid-row: 10;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
   }
 }
