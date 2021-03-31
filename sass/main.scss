@@ -7,12 +7,14 @@
 
 /* Seccion Inicio */
 
+ //menu 
 .navbar-dark .navbar-brand{
     color:#afef20;
     font-size: 28px;
     font-family: 'New Tegomin', serif;
 }
   
+//contenedor usando grid
   .contenedor{
       
       background-color:azul;
@@ -32,16 +34,6 @@
   
   }
   
-  .carousel{
-      grid-area: carousel;
-      display:flex;
-      margin:20px;
-     
-  }
-  
-  
-  
-      
   .nav-item a {
       color:white;
   }
@@ -52,52 +44,34 @@
   
   .menu{
       
-      
       grid-area:menu;
       background: #252e3d;
       margin:20px;
-      
-      
-  
+      ul{
+          li{
+
+             a{
+
+                text-decoration: none;
+                text-transform: uppercase;
+                padding:30px;
+                color:white;
+
+             }
+
+          }
+      }
+
   }
   
-  .menu ul li{
-      
-      list-style:none;
-  
-  }
-  
-  .menu ul li a{
-  
-      
-      text-decoration: none;
-      text-transform: uppercase;
-      padding:30px;
-      color:white;
-      
-  }
-  
+
   .menu ul li a:hover{
   
       background-color: grey;
   
   }
   
-  .search{
-  
-    float:left;
-    margin:0px;
-    width:1400px;
-    
-  }
-  
-  
-  
-  #im1{
-      width: 100px;
-  }
-  
-  
+  //seccion descripcion 
   .descripcion{
       grid-area:descripcion;
       height:490px;
@@ -122,24 +96,18 @@
         }
 
         p{
-  
-            
             color:white;
-            
             font-family: 'New Tegomin', serif;
             font-size: 30px;
             width:100%;
             text-align: center;
             margin-top: 250px;
             padding:30px;
-
-            
-            
         }
-
-
   }
   
+
+  //movimiento imagen
   @keyframes movimiento{
       from{
           background-position:bottom left;
@@ -150,7 +118,7 @@
   
   }
 
-
+//movimiento texto 
   @keyframes aparecer{
       0%{opacity: 0;}
       100%{opacity:1}
@@ -163,40 +131,28 @@
       grid-area: tituloprincipal;
       text-align: center;
       padding:100px;
+
+      h1{
+        background-color: black;
+        color:white;
+
+      }
       
   }
   
-  .tituloprincipal h1{
-      background-color: black;
-      color:white;
-      
-  }
-  
-
-  
-  .programa{
-      grid-area:programa;
-      background:white;
-      height: 800px;
-      padding:10px;
-  }
-
+ 
   #moto1{
 
     img{
 
         transition: transform .2s; /* Animation */
-        
-
     }
   }
 
   #auto{
 
     img{
-
-        transition: transform .2s; /* Animation */
-
+        transition: transform .2s; 
     }
   }
 
@@ -229,7 +185,6 @@
 
 }
 
-
 #bus:hover{
     img{
       transform: scale(1.1);
@@ -239,9 +194,6 @@
 
 }
 
-
-  
-  
   .moto h1{
       text-align: center;
       
@@ -253,8 +205,6 @@
 }
   
  
-  
-  
   .auto h1{
       text-align: center;  
   }
@@ -265,14 +215,14 @@
 
   }
   
-  
   .publico {
      
-      width:300px;
+      
   }
   
   .publico h1{
       text-align: center;
+      
   }
 
   .sede3 h1{
@@ -296,19 +246,8 @@
       
   }
   
-  .carousel-inner{
+  
 
-    width:100%;
-    max-height: 100% !important;
-
-  }
-
-.carousel-item{
-    img{
-    height:400px;
-    width:200px;
-    }
-}
   .footer{
   
       grid-area: footer;
@@ -374,6 +313,15 @@
       color:white;
       margin-right:150px;
   }
+
+//Fin seccion index
+
+
+
+
+
+
+
   
   /* Sección Nosotros */
   
@@ -386,6 +334,7 @@
                            "motivos motivos motivos"
                            "nosotros_titulo1 nosotros_titulo1 nosotros_titulo1"
                            "contenedorteam contenedorteam contenedorteam"
+                           "nosotros_chatea nosotros_chatea nosotros_chatea "
                            "footer footer footer"
   
   }
@@ -417,6 +366,11 @@
     
   }
 
+  .nosotros_chatea{
+      grid-area: nosotros_chatea;
+      width:50%;
+  }
+
   .motivos{
     grid-area: motivos;
     display:flex;
@@ -431,8 +385,6 @@
     height: 70px;
 
 }
-
-
 
 
 .opciones {
@@ -455,18 +407,19 @@
 
 .jumbotron{
 
-    margin:300px;
+    margin-left:45%;
     margin-top:50px;
     margin-bottom: 50px;
+    h1{
+        font-weight:;
+    }
+    
 }
 
 .display-4{
     font-size: 25px;
 }
 
-
-
-  
   .footer{
   
       grid-area:footer;
@@ -647,9 +600,6 @@
   }
 
 
-  
-  
-  
   
   /* Sección Contacto*/
   .contenedor4{
@@ -874,22 +824,25 @@ input[type=text], select, textarea {
 
     .contenedor{
         
-        width:80%;
-
+    
         display:grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-template-areas: "menu menu menu"
-                             "descripcion descripcion descripcion"
-                             "tituloprincipal tituloprincipal tituloprincipal"
-                             "moto moto moto"
-                             "auto auto auto"
-                             "testimonios testimonios testimonios"
-                             "sede1 auto1 publico1"
-                             "footer footer footer"
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: "menu menu"
+                             "descripcion descripcion"
+                             "tituloprincipal tituloprincipal"
+                             "moto moto"
+                             "auto auto"
+                             "testimonios testimonios"
+                             "sede1 auto1" 
+                             "publico1"
+                             "footer footer"
 
 
     }
 
+   
+
+   
     .descripcion{
 
         h2{
@@ -920,95 +873,139 @@ input[type=text], select, textarea {
         }
          
     }
+
+    //seccion nosotros responsive
+
+    .motivos{
+        grid-area: motivos;
+        display:flex;
+        flex-wrap: wrap;
+        margin:10px;
+    
+    }
+
+    .opciones {
+        margin-left:30%;
+        width: 40%;
+    }
+    
       
          
   }
   
   
-  @media screen and (min-width: 480px)and (max-width:780px) {
+  @media screen and (min-width: 400px)and (max-width:780px) {
   
+     //seccion index responsive
+    .contenedor{
+        
+        
 
-       
+        display:grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-areas: "menu"
+                             "descripcion"
+                             "tituloprincipal"
+                             "moto"
+                             "auto"
+                             "publico"
+                             "testimonios"
+                             "sede1" 
+                             "auto1" 
+                             "publico1"
+                             "footer"
+
+
+    }
+
+    .descripcion{
+        
+
+        h2{
+            font-size: 20px;
+        }
+
+        p{
+
+        color:white;
+        font-family: 'New Tegomin', serif;
+        font-size: 18px;
+        width:100%;
+        text-align: center;
+        margin-top: 35%;
+        padding:10px;
+
+        }
+
+        .tituloprincipal {
+            margin:0;
+
+           
+        
+           h1{
+            background-color: black;
+            color:white;
+            width:50%;
+            padding:0;
+           }
+            
+        }
+
+       .publico {
+           display:block;
+           width:100%;
+           
+        }
+
+        
+         
+    }
+
+
+    //seccion nosotros responsive
+
+    .motivos{
+        grid-area: motivos;
+        display:flex;
+        flex-wrap: wrap;
+        margin:10px;
+    
+    }
+
+    .opciones {
+        margin-left:30%;
+        width: 40%;
+    }
+    
+
+    //seccion cursos responsive
+    .contenedor3{
+        
+        
+
+        display:grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-areas: "menu"
+                           "curso_title"
+                           "motocicleta1"
+                           "automovil" 
+                           "publico1" 
+                           "dropdown-cursos"
+                           "tituloprincipal"
+                           "curso_motorcycle"
+                           "curso_title2"
+                           "curso_auto"
+                           "curso_title3"
+                           "card-group"
+                           "footer"
+
+    }
+
+   
+
+   
       
-      .contenedor{
-  
-          display:flex;
-          flex-wrap: wrap;
-  
-      }
-  
-      .contenedor1{
-  
-          display:flex;
-          flex-wrap: wrap;
-  
-      }
-  
-      .contenedor4{
-  
-          display:flex;
-          flex-wrap: wrap;
-  
-      }
-  
-      .contenedor3{
-  
-          display:flex;
-          flex-wrap: wrap;
-  
-      }
-      .titopciones{
-          text-align: center;
-          margin:20px;
-          padding:20px;
-      }
-  
-      .motocicleta1{
-          width:100%;
-          padding:100px;
-  
-      }
-  
       
-  
-      #auto1{
-          width:100%;
-          justify-content: center;
-          padding:auto;
-      }
-  
-      .publico1{
-  
-  
-      }
-  
-  
-      .descripcion p{
-          padding:20px;
-      }
-  
-      .meta h1{
-          font-size: 25px;
-      }
-  
-      .meta h2{
-          font-size: 20px;
-      }
-  
-      .video1{
-          width:100%;
-          margin:10px;
-          padding:0;
-      }
-  
-      .menu{
-          width:100%;
-          
-      }
-  
-      .publico{
-          width:100%;
-      }
   }
 
 
