@@ -365,14 +365,10 @@ to {
 }
 
 .jumbotron {
-  margin-left: 45%;
+  margin-left: 25%;
   margin-top: 50px;
   margin-bottom: 50px;
 }
-.jumbotron h1 {
-  font-weight: 200;
-}
-
 .display-4 {
   font-size: 25px;
 }
@@ -630,88 +626,26 @@ input[type=submit]:hover {
 .contenedor5 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "menu menu menu" "corpo corpo corpo" "mosaico mosaico mosaico" "footer footer footer";
+  grid-template-areas: "menu menu menu" "videocorporate videocorporate videocorporate" "jumbotron jumbotron jumbotron" "footer footer footer";
 }
 .contenedor5 .corpo {
   text-align: center;
-  padding: 100px;
+  padding: 10px;
 }
 .contenedor5 .corpo .corpo__titulo {
   background-color: black;
   color: white;
 }
 
-.corpo {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-area: corpo;
-}
-
-.corpo_img {
-  margin: 20%;
-  grid-area: corpo_img;
-}
-.corpo_img img {
-  justify-content: center;
-}
-.corpo_img p {
-  font-size: 30px;
-  padding: 30px;
-}
-
-.mosaico {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-area: mosaico;
+.corporatepadre {
   display: flex;
   flex-wrap: wrap;
-  padding: 20px;
-  background-repeat: no-repeat;
-  align-content: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
-.mosaico div {
-  width: 30vw;
-  height: 40vh;
-}
-
-.mosaico .m1 {
-  background: url("/imagenes/mosaico1.PNG");
-  background-position: center center;
-  background-size: cover;
-}
-
-.mosaico .m2 {
-  background: url("/imagenes/mosaico3.PNG");
-  background-position: center center;
-  background-size: cover;
-}
-
-.mosaico .m3 {
-  background: url("/imagenes/mosaico2.PNG");
-  background-position: center center;
-  background-size: cover;
-}
-
-.mosaico .m4 {
-  background: url("/imagenes/mosaico4.PNG");
-  background-position: center center;
-  background-size: cover;
-}
-
-.mosaico .m5 {
-  background: url("/imagenes/mosaico5.PNG");
-  background-position: center center;
-  background-size: cover;
-}
-
-.mosaico .m6 {
-  background: url("/imagenes/mosaico6.PNG");
-  background-position: center center;
-  background-size: cover;
+.videocorporate iframe {
+  width: 800;
+  margin-left: 80%;
 }
 
 /* Media queries para hacer el index responsive */
@@ -815,6 +749,10 @@ input[type=submit]:hover {
     width: 100%;
   }
 
+  .contenedorteam .cardteam {
+    margin-left: 20%;
+  }
+
   .motivos {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
@@ -834,6 +772,11 @@ input[type=submit]:hover {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-areas: "menu" "curso_title" "motocicleta1" "automovil" "publico1" "dropdown-cursos" "tituloprincipal" "curso_motorcycle" "curso_title2" "curso_auto" "curso_title3" "card-group" "footer";
+  }
+
+  .container {
+    margin-left: 10%;
+    margin-right: 10%;
   }
   .menu {
     -ms-grid-row: 1;
