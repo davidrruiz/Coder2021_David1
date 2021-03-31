@@ -382,34 +382,87 @@
       display:grid;
       grid-template-columns: repeat(3,1fr);
       grid-template-areas: "menu menu menu"
-                           "nosotros_carousel nosotros_carousel nosotros_carousel"
+                           "nosotros_titulo nosotros_titulo nosotros_titulo"
+                           "motivos motivos motivos"
+                           "nosotros_titulo1 nosotros_titulo1 nosotros_titulo1"
+                           "contenedorteam contenedorteam contenedorteam"
                            "footer footer footer"
   
   }
 
-  .nosotros_carousel{
+  .nosotros_titulo{
+    grid-area: nosotros_titulo;
+    text-align: center;
+    padding:100px;
 
-      grid-area: nosotros_carousel;
-      display:flex;
-      
-      
+        h1{
+            background-color: black;
+            color:white;
+            
+        }
+    
   }
 
-  .prueba_nosotros{
+  .nosotros_titulo1{
+    grid-area: nosotros_titulo;
+    text-align: center;
+    padding:100px;
+    margin-bottom: 50px;
 
+        h1{
+            background-color: black;
+            color:white;
+            
+        }
+    
+  }
+
+  .motivos{
+    grid-area: motivos;
+    display:flex;
+    flex-wrap: nowrap;
     margin:100px;
-      
 
-    p{
+}
 
-        padding:30px;
+#moti{
 
-    }
-      
-  }
-  
+    width:70px;
+    height: 70px;
+
+}
 
 
+
+
+.opciones {
+    width: 25%;
+}
+
+.contenedorteam{
+    grid-area:contenedorteam;
+}
+
+.contenedorteam{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width:1200px;
+    padding:30px;
+    margin:auto;
+
+}
+
+.jumbotron{
+
+    margin:300px;
+    margin-top:50px;
+    margin-bottom: 50px;
+}
+
+.display-4{
+    font-size: 25px;
+}
 
 
 
@@ -438,10 +491,23 @@
                            "curso_title2 curso_title2 curso_title2"
                            "curso_auto curso_auto curso_auto"
                            "curso_title3 curso_title3 curso_title3"
+                           "card-group card-group card-group"
                            "footer footer footer"
 
    
   
+  }
+
+  .card-group{
+      grid-area:card-group;
+
+      .card{
+          margin:60px;
+          img{
+              width:200px;
+              
+          }
+      }
   }
 
   .curso_title{
@@ -702,7 +768,7 @@ input[type=text], select, textarea {
     grid-template-columns: repeat(3,1fr);
     grid-template-areas: "menu menu menu"
                          "corpo corpo corpo"
-                         "corpo_img corpo_img corpo_img"
+                         "mosaico mosaico mosaico"
                           "footer footer footer"
 
   }
@@ -733,7 +799,69 @@ input[type=text], select, textarea {
 
 }
   
-  
+.mosaico{
+
+    grid-area: mosaico;
+    display:flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-repeat: no-repeat;
+    align-content: center;
+    justify-content: center;    
+}
+
+ .mosaico div  {
+    
+    width:30vw;
+    height:40vh;
+    
+}
+
+.mosaico .m1{
+    background: url("/imagenes/mosaico1.PNG");
+    background-position:center center;
+    background-size: cover;
+    
+}
+
+.mosaico .m2{
+    background: url("/imagenes/mosaico3.PNG");
+    background-position:center center;
+    background-size: cover;
+    
+}
+
+
+.mosaico .m3{
+    background: url("/imagenes/mosaico2.PNG");
+    background-position:center center;
+    background-size: cover;
+    
+}
+
+
+.mosaico .m4{
+    background: url("/imagenes/mosaico4.PNG");
+    background-position:center center;
+    background-size: cover;
+    
+}
+
+.mosaico .m5{
+    background: url("/imagenes/mosaico5.PNG");
+    background-position:center center;
+    background-size: cover;
+    
+}
+
+.mosaico .m6{
+    background: url("/imagenes/mosaico6.PNG");
+    background-position:center center;
+    background-size: cover;
+    
+}
+
+
 
 
   
@@ -743,6 +871,55 @@ input[type=text], select, textarea {
   /* Media queries para hacer el index responsive */
   
   @media screen and (min-width: 780px)and (max-width:1024px) {
+
+    .contenedor{
+        
+        width:80%;
+
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-areas: "menu menu menu"
+                             "descripcion descripcion descripcion"
+                             "tituloprincipal tituloprincipal tituloprincipal"
+                             "moto moto moto"
+                             "auto auto auto"
+                             "testimonios testimonios testimonios"
+                             "sede1 auto1 publico1"
+                             "footer footer footer"
+
+
+    }
+
+    .descripcion{
+
+        h2{
+            font-size: 20px;
+        }
+
+        p{
+
+            color:white;
+        font-family: 'New Tegomin', serif;
+        font-size: 25px;
+        width:100%;
+        text-align: center;
+        margin-top: 35%;
+        padding:10px;
+
+        }
+
+        .tituloprincipal {
+
+            width:100px;
+        
+           h1{
+            background-color: black;
+            color:white;
+           }
+            
+        }
+         
+    }
       
          
   }
@@ -750,6 +927,8 @@ input[type=text], select, textarea {
   
   @media screen and (min-width: 480px)and (max-width:780px) {
   
+
+       
       
       .contenedor{
   

@@ -263,13 +263,13 @@ to {
 }
 
 .contenedor1 > .footer {
-  -ms-grid-row: 3;
+  -ms-grid-row: 6;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
 }
 
 .contenedor3 > .footer {
-  -ms-grid-row: 10;
+  -ms-grid-row: 11;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
 }
@@ -335,22 +335,79 @@ to {
 .contenedor1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "menu menu menu" "nosotros_carousel nosotros_carousel nosotros_carousel" "footer footer footer";
+  grid-template-areas: "menu menu menu" "nosotros_titulo nosotros_titulo nosotros_titulo" "motivos motivos motivos" "nosotros_titulo1 nosotros_titulo1 nosotros_titulo1" "contenedorteam contenedorteam contenedorteam" "footer footer footer";
 }
 
-.nosotros_carousel {
+.nosotros_titulo {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
-  grid-area: nosotros_carousel;
-  display: flex;
+  grid-area: nosotros_titulo;
+  text-align: center;
+  padding: 100px;
+}
+.nosotros_titulo h1 {
+  background-color: black;
+  color: white;
 }
 
-.prueba_nosotros {
+.nosotros_titulo1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: nosotros_titulo;
+  text-align: center;
+  padding: 100px;
+  margin-bottom: 50px;
+}
+.nosotros_titulo1 h1 {
+  background-color: black;
+  color: white;
+}
+
+.motivos {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: motivos;
+  display: flex;
+  flex-wrap: nowrap;
   margin: 100px;
 }
-.prueba_nosotros p {
+
+#moti {
+  width: 70px;
+  height: 70px;
+}
+
+.opciones {
+  width: 25%;
+}
+
+.contenedorteam {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: contenedorteam;
+}
+
+.contenedorteam {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
   padding: 30px;
+  margin: auto;
+}
+
+.jumbotron {
+  margin: 300px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.display-4 {
+  font-size: 25px;
 }
 
 .footer {
@@ -362,13 +419,13 @@ to {
 }
 
 .contenedor1 > .footer {
-  -ms-grid-row: 3;
+  -ms-grid-row: 6;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
 }
 
 .contenedor3 > .footer {
-  -ms-grid-row: 10;
+  -ms-grid-row: 11;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
 }
@@ -389,7 +446,20 @@ to {
 .contenedor3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "menu menu menu" "curso_title curso_title curso_title" "motocicleta1 automovil publico1" "dropdown-cursos dropdown-cursos dropdown-cursos" "tituloprincipal tituloprincipal tituloprincipal" "curso_motorcycle curso_motorcycle curso_motorcycle" "curso_title2 curso_title2 curso_title2" "curso_auto curso_auto curso_auto" "curso_title3 curso_title3 curso_title3" "footer footer footer";
+  grid-template-areas: "menu menu menu" "curso_title curso_title curso_title" "motocicleta1 automovil publico1" "dropdown-cursos dropdown-cursos dropdown-cursos" "tituloprincipal tituloprincipal tituloprincipal" "curso_motorcycle curso_motorcycle curso_motorcycle" "curso_title2 curso_title2 curso_title2" "curso_auto curso_auto curso_auto" "curso_title3 curso_title3 curso_title3" "card-group card-group card-group" "footer footer footer";
+}
+
+.card-group {
+  -ms-grid-row: 10;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: card-group;
+}
+.card-group .card {
+  margin: 60px;
+}
+.card-group .card img {
+  width: 200px;
 }
 
 .curso_title {
@@ -593,7 +663,7 @@ input[type=submit]:hover {
 .contenedor5 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "menu menu menu" "corpo corpo corpo" "corpo_img corpo_img corpo_img" "footer footer footer";
+  grid-template-areas: "menu menu menu" "corpo corpo corpo" "mosaico mosaico mosaico" "footer footer footer";
 }
 .contenedor5 .corpo {
   text-align: center;
@@ -612,9 +682,6 @@ input[type=submit]:hover {
 }
 
 .corpo_img {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   margin: 20%;
   grid-area: corpo_img;
 }
@@ -626,7 +693,114 @@ input[type=submit]:hover {
   padding: 30px;
 }
 
+.mosaico {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: mosaico;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-repeat: no-repeat;
+  align-content: center;
+  justify-content: center;
+}
+
+.mosaico div {
+  width: 30vw;
+  height: 40vh;
+}
+
+.mosaico .m1 {
+  background: url("/imagenes/mosaico1.PNG");
+  background-position: center center;
+  background-size: cover;
+}
+
+.mosaico .m2 {
+  background: url("/imagenes/mosaico3.PNG");
+  background-position: center center;
+  background-size: cover;
+}
+
+.mosaico .m3 {
+  background: url("/imagenes/mosaico2.PNG");
+  background-position: center center;
+  background-size: cover;
+}
+
+.mosaico .m4 {
+  background: url("/imagenes/mosaico4.PNG");
+  background-position: center center;
+  background-size: cover;
+}
+
+.mosaico .m5 {
+  background: url("/imagenes/mosaico5.PNG");
+  background-position: center center;
+  background-size: cover;
+}
+
+.mosaico .m6 {
+  background: url("/imagenes/mosaico6.PNG");
+  background-position: center center;
+  background-size: cover;
+}
+
 /* Media queries para hacer el index responsive */
+@media screen and (min-width: 780px) and (max-width: 1024px) {
+  .contenedor {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "menu menu menu" "descripcion descripcion descripcion" "tituloprincipal tituloprincipal tituloprincipal" "moto moto moto" "auto auto auto" "testimonios testimonios testimonios" "sede1 auto1 publico1" "footer footer footer";
+  }
+
+  .descripcion h2 {
+    font-size: 20px;
+  }
+  .descripcion p {
+    color: white;
+    font-family: "New Tegomin", serif;
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+    margin-top: 35%;
+    padding: 10px;
+  }
+  .descripcion .tituloprincipal {
+    width: 100px;
+  }
+  .descripcion .tituloprincipal h1 {
+    background-color: black;
+    color: white;
+  }
+  .menu {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  .descripcion {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  .tituloprincipal {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  .footer {
+    -ms-grid-row: 8;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+  .footer {
+    -ms-grid-row: 8;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+}
 @media screen and (min-width: 480px) and (max-width: 780px) {
   .contenedor {
     display: flex;
